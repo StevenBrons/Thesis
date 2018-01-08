@@ -1,0 +1,15 @@
+*.spl
+*.bbl
+*.sav
+*.bak
+*.out
+*.log
+*.synctex.gz
+*.aux
+*.blg
+*.pdf
+*.ai
+
+Thumbs.db
+Stylesheets/Signature.png
+*.pdf

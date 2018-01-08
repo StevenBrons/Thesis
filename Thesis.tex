@@ -1,0 +1,147 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{book}
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.5} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage{marginnote}
+\usepackage[letterpaper, margin=1in, marginparwidth=0.1in, marginparsep=0.1in]{geometry} % Document margins %JS add margin info
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+%\usepackage{abstract} % Allows abstract customization
+%\renewcommand{\abstractnamefont}{\normalfont} %\bfseries} % Set the "Abstract" text to bold
+%\renewcommand{\abstracttextfont}{\normalfont} %\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+
+% JS packages
+\usepackage{etex}
+
+\usepackage{amssymb,amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{tabularx}
+\usepackage[]{units}
+\usepackage[]{nicefrac}
+\usepackage{marginnote}
+\usepackage{mparhack} 
+\usepackage[usenames,dvipsnames]{xcolor} 
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{colortbl}
+\usepackage{subfig}
+\usepackage[abs]{overpic}
+\usepackage{tikz}
+\usepackage{newclude}
+\usepackage{setspace}
+\usepackage{soul}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{standalone}
+\usepackage{ctable} % for \specialrule command
+\usepackage{cite}
+
+%\usepackage[sectionbib]{natbib}
+%\usepackage[sectionbib]{chapterbib}  
+%\usepackage[style=numeric]{biblatex}
+%\addbibresource{bibintro}
+%\addbibresource{bibhaste}
+%\addbibresource{bibquad}
+
+
+\usepackage{tabto}
+\usepackage{paralist}
+
+% % % TIKZ % % %
+\usetikzlibrary{intersections}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes,decorations}
+\usetikzlibrary{spy,backgrounds}
+\usetikzlibrary{calc}
+
+
+%\usepgfmodule{plot}
+
+% % % TIKZ % % %
+
+
+% for figures: caption , subcaption
+\captionsetup[figure]{labelformat=simple, labelsep=colon, textfont=normalfont}
+\captionsetup[table]{labelformat=simple, labelsep=colon, textfont=normalfont}
+%\captionsetup[subfigure]{labelformat=simple, labelsep=colon, textfont=normalfont}
+
+\renewcommand{\thesection}{\arabic{section}}%... from subsections
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}%... from subsections
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}%... from subsections
+
+\definecolor{light-gray}{gray}{0.8}
+
+\graphicspath{{figures/}{../figures/}}
+
+\def\degr{${}^\circ$}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{}} % Article title
+
+\author{
+\large
+%\textsc
+{Tim van Mourik$^1$}\\[2mm] % Your name
+\small $^1$ Donders Institute for Brain, Cognition and Behaviour, Radboud University Nijmegen, The Netherlands\\ % Your institution
+%\normalsize \href{mailto:}{} % Your email address
+\vspace{-5mm}
+}
+\date{\today}
+
+%----------------------------------------------------------------------------------------
+% BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+\setlength{\parindent}{0.5cm}
+%\thispagestyle{fancy} % All pages have headers and footers
+\renewcommand{\vec}[1]{\mathbf{#1}} %This command will make \vec typeset LaTeX vectors using bold instead of an arrow:
+
+
+\begin{titlepage}
+	\centering
+	\vspace{1cm}
+	\vspace{1.5cm}
+	{\huge\bfseries On the analysis of layer specific fMRI \par}
+	\vspace{4cm}
+	{\Large by \\ Tim van Mourik\par}
+	\vfill
+\end{titlepage}
+
+\include{Chapters/01_Introduction/Introduction}
+\include{Chapters/02_Registration/Registration}
+\include{Chapters/03_GLM/GLM}
+\include{Chapters/04_Attention/Attention}
+\include{Chapters/05_Porcupine/Porcupine}
+\include{Chapters/06_Discussion/Discussion}
+\include{Chapters/07_Appendix/Appendix}
+
+\end{document}
+
