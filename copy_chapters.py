@@ -28,12 +28,15 @@ for file in tex_files:
 for file in tex_files:
 	with fileinput.FileInput(op.join(destination, file), inplace=True) as file:
 		for line in file:
-			print(line.replace('\input{', '\input{./Chapters/02_Registration/').replace('\citep{', '\cite{'), end='')
+			print(line.replace('\input{', '\input{./Chapters/02_Registration/')
+                       .replace('\citep{', '\cite{')
+                       .replace('clip=true]{', 'clip=true]{./Chapters/02_Registration/Images/')
+                    , end='')
 		
-for file in tex_files:
-	with fileinput.FileInput(op.join(destination, file), inplace=True) as file:
-		for line in file:
-			print(line.replace('clip=true]{', 'clip=true]{./Chapters/02_Registration/Images/'), end='')
+#for file in tex_files:
+#	with fileinput.FileInput(op.join(destination, file), inplace=True) as file:
+#		for line in file:
+#			print(line.replace('clip=true]{', 'clip=true]{./Chapters/02_Registration/Images/'), end='')
 			
 source = op.join(working_dir, '../RegistrationLaTeX/Images')
 destination = op.join(working_dir, './Chapters/02_Registration/Images/')
