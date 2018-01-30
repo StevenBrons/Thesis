@@ -1,0 +1,19 @@
+\section{Results}
+We employed RBR on a constructed gold standard where the exact displacement was known. By taking an undistorted FLASH image and realistically distorting the cortical surface by means of a field map, we could test if we could retrieve the initial position of the boundaries. In Fig~\ref{fig:registrationhistogram}, we present a histogram of the displaced boundaries and the registered boundaries, both with respect to the true position. The registered boundaries clearly show a sharp distribution centred around the origin ($\mu=0.027$ mm). The FWHM of the distribution is $0.49$ mm, showing that RBR provides accurate submillimetre registration. Additionally, Fig.~\ref{fig:flashregistration} shows a cross section (middle slice of the volume) of the registration.
+\input{./Chapters/02_Registration/Chapters/Figures/RegistrationHistogram}
+\input{./Chapters/02_Registration/Chapters/Figures/FlashRegistration}
+
+In most of the slice (and the volume), the registration accuracy is well within the submillimetre regime. However, especially in low contrast areas the algorithm may show some small inaccuracies. This mainly proliferates when there is also another gradient in the image (e.g. the pial surface) on which the algorithm starts to fix the boundaries. This is largely related to the fine line between obtaining sufficient specificity and overfitting the data.
+
+% % EPI
+We performed RBR on a (resting state) dataset intended for laminar analysis consisting of 11 subjects. The boundaries after a 12 DoF \texttt{bbregister} were recursively registered to the mean EPI images (0.93 mm isotropic resolution) and this yielded an updated cortical surface. The new surface followed the grey matter boundary in the volume visibly better than the unregistered one. In Fig.~\ref{fig:epiregistration} we present a single slice with both sets of boundaries overlaid on top of them, illustrating the improvement. We here present the data for a representative subject, and identical images for all other subjects are presented in the Supplemental Materials.
+\input{./Chapters/02_Registration/Chapters/Figures/EpiRegistration}
+
+Additionally, Fig~\ref{fig:aad} shows the Absolute Average Displacement (AAD) of the registration on salted images with respect to the registration on the no-noise volume. Even for highly noisy images, the registration improves somewhat with respect to the undisplaced boundaries. In the absence of a gold standard model of the distortions, the monotonic decrease of the AAD indicates that RBR converges to an optimum as a function of data quality.
+\input{./Chapters/02_Registration/Chapters/Figures/AAD}
+
+\subsection{Data Availability}
+All source code for the registration algorithm is freely available under the GPL 3.0 license at \url{https://github.com/TimVanMourik/OpenFmriAnalysis}. The respective modules are also available in Porcupine \url{https://timvanmourik.github.io/Porcupine}, a visual pipeline tool that automatically creates custom analysis scripts \cite{VanMourik2017}. All code to generate the images in this paper are available at the Donders Repository \url{https://data.donders.ru.nl/collections/shared/di.dccn.DSC_3015016.05_558/id/27015532?0}. This also includes additional movie files that scroll through the volumes, which is highly relevant to fully investigate whole brain registration performance. 
+\input{./Chapters/02_Registration/Chapters/Figures/QrCodes}
+
+

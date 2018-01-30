@@ -1,0 +1,45 @@
+\section{Orientation dependent partial volume distribution}
+\label{sec:Appendix2}
+In order to find out how different laminae are distributed over voxels, it is important to know the orientation and location of the surface with respect to the voxels. Here we analytically describe an algorithm to solve this problem.
+
+The intersection of a laminar surface and a voxel is approximated by the intersection of a cuboid and a plane that are arbitrarily positioned and oriented with respect to each other.
+
+The voxel grid is given by three primitive lattice vectors $\{\vec{a_1}, \vec{a_2}, \vec{a_3}\}$, having the orientation and length of the voxel edges. The lattice vectors are usually but not necessarily oriented along the cardinal axes. For a cubic voxel grid with edge length $L$ the primitive lattice vectors are $\{L \hat{x}, L \hat{y}$ and $L \hat{z}\}$.
+A voxel can be indexed with three integers $m_i$. The centre position $\vec{m}$ of the voxel is 
+\begin{equation}
+ \vec{m}=\sum_{i=1}^{3}m_i \vec{a_i}
+\end{equation}
+and the 8 corner positions $\vec{c}$ of the voxel are
+ \begin{equation}
+ \vec{c}=\sum_{i=1}^{3}\left(m_i \pm \frac{1}{2} \right) \vec{a_i}.
+\end{equation}
+The voxel volume is $V=\vec{a_1}\cdot \left( \vec{a_2} \times \vec{a_3}\right)$.
+
+A plane can be defined by a vector $\vec{N}$. The plane is perpendicular to $\vec{N}$ and has distance $1/\|\vec{N}\|$ to the origin. The plane is given by all points $\vec{r}$ satisfying
+\begin{equation}
+ \vec{r} \cdot \vec{N}=1.
+\end{equation}
+It is useful to express $\vec{N}$ in terms of reciprocal lattice vectors $\vec{b_i}$:
+\begin{equation}
+ \vec{N}=\sum_{i=1}^{3}N_i\vec{b_i}.
+\label{eq:rn=1}
+\end{equation}
+The reciprocal basis vector $\vec{b_1}$ is defined as $\vec{b_1}=\vec{a_2} \times \vec{a_3} / V$, $\vec{b_2}$ and $\vec{b_3}$ are obtained by cyclic permutation. For a cubic voxel grid, the  reciprocal basis vectors are $\vec{b_1}=\hat{x}/L$, $\vec{b_2}=\hat{y}/L$ and $\vec{b_3}=\hat{z}/L$. By construction $\vec{a_i}$ and $\vec{b_i}$ are orthonormal to each other
+\begin{equation}
+\vec{a_i} \cdot \vec{b_j} = \delta_{ij}.
+\end{equation}
+
+Points on the four edges of voxel $\vec{m}$ in the direction $\vec{a_1}$ are of the form
+\begin{equation}
+\vec{r}=(m_1 + \lambda_1)  \vec{a_1}+\sum_{i=2}^{3}(m_i\pm\frac{1}{2}) \vec{a_i}, \hspace{5pt}  |\lambda_1 | \le \frac {1}{2}.
+\end{equation}
+In view of \ref{eq:rn=1} the four possible 
+intersection points of $\vec{N}$ with the edges parallel to $\vec{a_1}$ are given by the four $\lambda_1$ of the form
+\begin{equation}
+\lambda_1 N_1 = 1 -\sum_{i=1}^{3}m_i N_i \pm\frac{1}{2} N_2 \pm\frac{1}{2} N_3.
+\end{equation}
+Analogously the possible intersection points with the edges parallel to $\vec{a_2}$ and $\vec{a_3}$ are given by four $\lambda_2$ and $\lambda_3$ values respectively. Of the 12 possible intersection points, those with $|\lambda_i | \le \frac {1}{2}$ give the actual (at most 6) intersection points. The area of the polygon connecting the intersection points can be readily computed, as well as the volume on either side of the plane. 
+
+At this point we have expressions for the intersection point that are independent of the choice of the voxel edge vectors $\vec{a_i}$. Explicit expressions can be obtained for the intersection points and intersection area. To be explicit, consider the intersection of a plane, moving with a given orientation, i.e. $\vec{N} = t \vec{n}$ where $t$ takes arbitrary real values and $\vec{n}$ stays constant. A finite intersection is only found for the range of $t$ values between the maximum and
+minimum value of $1/[\sum_{i=1}^{3} (m_i \pm\frac{1}{2}) n_i]$.
+%why moving, there is no reason to consider a plane moving through a cube

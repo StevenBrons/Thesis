@@ -1,0 +1,9 @@
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.95\textwidth, clip=true]{./Chapters/02_Registration/Images/./WorkflowSchematic}
+%\includegraphics[width=0.95\textwidth, clip=true]{./Chapters/02_Registration/Images/./Images/WorkflowSchematic.png}
+\caption{
+	A schematic of the workflow. First, the volume is recursively broken up into parts, for which registrations are computed by means of the edge detecting boundary based registration method. Based on the transformations found in this step, the second step is the updating of a cuboid lattice. The control points within the lattice are updated and applied to the boundaries. Specifically, this was performed based on a tetrahedral division of the cube. For each tetrahedron, a displacement field was computed and applied to the vertices within the tetrahedron.
+}
+\label{fig:cubedivision}
+\end{figure}
