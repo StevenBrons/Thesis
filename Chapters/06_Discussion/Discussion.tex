@@ -1,12 +1,35 @@
 
-\chapter{Discussion}
+\chapter{Summary and Discussion}
 \chaptermark{Discussion}
 \label{ch:discussion}
 
-\linespread{1.5}
-\newpage
+For long the nature of the processing undertaken by the cortical layers has been recognised as a mystery that needs to be resolved to better understand the computations being performed by our brains \cite{Miller2001}. The most realistic method to date of studying this in living human subjects is with functional MRI, as it it very precise and non invasive. But many challenges in spatial and temporal resolution, resolution, interpretation, and all sorts of noise have to be overcome before this can be easily used to solve neuropsychological problems. The objective of this thesis was to pave the way for doing more routine laminar fMRI analysis. Indeed we made significant steps towards this end. 
+We have developed several new methods that solve major problems in laminar analysis, we conducted a full layer specific analysis, and took explicit care to make everything along the way reproducible and reusable. %% <-- unpack
 
-%\linenumbers
+\section*{Chapter 2: Recursive Boundary Registration}
+First, we addressed the problem of local distortions that are often present in Echo Planar Images (EPI). Due to inhomogeneities in the main magnetic field, spins in some areas rotate a bit faster or slower than others. Effectively, this causes small shifts of parts of the image with respect to the true position. Thus, even though the true locations of the layers are known, the distortions may easily be larger than the thickness of the layers. Without correcting this effect it is hopeless to get out any reliable layer signal. So that is what we set out to do in Chapter 2.
+
+Geometry transformation from one volume to the other (coregistration) has been very succesful for linear transformations and is used routinely in fMRI analysis. Even on volumes with low resolution, low contrast, or few slices, it may work well \cite{Greve201}, but not for non-linear transformations. Such transformations require a high number of degrees of freedom because of the many parameters that need to be estimated. This leaves much more room for error and therefore usually only works on high contrast data sets. It is used routinely for transforming single subject anatomical space to a template space with the same contrast. However, existing techniques are not powerful enough to undistort low contrast EPI images. We therefore invented a new technique for this, Recursive Boundary Registration. By recursively applying linear transformations on diminishing spatial scales, we effectively compute a non linear registration. In order to guarantee smoothness over all transformations, it is combined with a control point lattice that regulates the transformations. Explicitly taking the geometry of the volume into account as a type of prior knowledge is a novel way to approach non linear registrations.
+
+We tested RBR on two different types of data. First, in order to establish a gold standard, we distorted a FLASH image that is typically without distortion. Because we did this in a controlled manner, we could easily compare the performance of RBR to our ground truth and verify the quality of the registration. We thus proceeded to EPI data set of 11 subjects that had real distortions. As the true size of the distortions was unknown there cannot be an absolute quality metric for the registration. Instead, by adding different levels of noise we showed that there is a clear SNR dependance in the displacement that decreases towards the no-noise condition. Additionally, we provide an abundance of graphical evidence to illustrate the performance of RBR. 
+
+\section*{Chapter 3: Spatial GLM for laminar fMRI}
+\section*{Chapter 4: Layer Specificity in Visual Attention}
+
+
+"In addition, excitatory neurons may quickly redistribute input from the thalamus by means of their local axonal collaterals, 
+so that cortical activity nearly instantaneously spreads over several layers and columns to mediate perception of sensory stimuli (Reyes-Puerta et al., 2015)"
 
 publication bias 
 null result
+
+
+\section*{Chapter 5: Pipelines for fMRI with Porcupine}
+
+
+
+
+
+
+\linespread{1.5}
+\newpage
