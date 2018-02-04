@@ -12,7 +12,7 @@ For any chosen voxel grid, the design matrix $\mathbf{X}$ should be derived from
 % The GLM
 A general linear model with a number of voxels $n$ and number of time points $m$ can be described as:
 \begin{equation}
-\mathbf{Y=X B} + \epsilon,
+\mathbf{Y=X B +\epsilon},
 \label{eq:glm}
 \end{equation}
 where, $\mathbf{Y}$, size $[n\times m]$, represents a multivariate distribution that is being modelled by $\mathbf{X}$, size $[n\times k]$, the laminar design matrix with $k$ layers. The model is fit in order to obtain estimates $\hat{\mathbf{B}}$, size $[k\times m]$, and these estimates are chosen such, that the error term $\epsilon$ is minimised.
