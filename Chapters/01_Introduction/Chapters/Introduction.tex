@@ -5,39 +5,43 @@ In order to investigate the workings of the brain, there is a wide variety of to
 \section*{Cortical layers}
 The grey matter of the cortex is a thin shell of approximately 3 mm \cite{Zilles1990} around the white matter. The white matter consists of long fiber tracts that relay signals from one brain area to another, but it is mainly the grey matter where computations are being performed. The grey matter itself consists of several shells as well, cortical layers (see Figure~\ref{fig:layers}), that are likely to have functionally distinct roles.
 \input{./Chapters/01_Introduction/Images/Layers}
-The specifics of the performed computations are largely unknown, but in general, three types of information can be dissociated according to the predictive coding framework \cite{Friston2010}. At the fundamental level, the brain continuously makes predictions, compares it to (sensory) input, and the difference is called the prediction error. This is a never ending recurrent process of updating knowledge based on new information. The different roles within the predictive coding framework can largely be associated with the cortical layers. In principle, ascending (feed forward, e.g. `I \emph{see} an apple') and descending connections (feedback, e.g. `I \emph{imagine seeing} an apple') are distinguished \cite{Rockland1979} and can be related to hierarchical ranks of processing \cite{Barone2000}. For a given layer $i$ in the hierarchy, it receives feed forward input that target layer 4 and to a lesser extent layer 5 \cite{Constantinople2013} and they predominantly originate from supragranular layers (see Figure~\ref{fig:layerprocessing}). On the other hand, feedback connections from higher areas terminate primarily in layers 1 and 5, but avoid layer 4 \cite{Anderson2009}. The differential contribution is not well established \cite{Shipp2013}. This `canonical microcircuit' describes the excitatory relay of information within the cortex. With its link to the predictive coding, it can provide a more mechanistic understanding of the computations in the brain \cite{Shipp2016}.
-\input{./Chapters/01_Introduction/Images/LaminarProcessing}.
+The specifics of the performed computations are largely unknown, but in general, three types of information can be dissociated according to the predictive coding framework \cite{Friston2010}. At the fundamental level, the brain continuously makes predictions, compares it to (sensory) input, and the difference is called the prediction error. This is a never ending recurrent process of updating knowledge based on new information. The different roles within the predictive coding framework can largely be associated with the cortical layers. In principle, ascending (feedforward, e.g. `I \emph{see} an apple') and descending connections (feedback, e.g. `I \emph{imagine seeing} an apple') are distinguished \cite{Rockland1979} and can be related to hierarchical ranks of processing \cite{Barone2000}. For a given layer $i$ in the hierarchy, it receives feedforward input that target layer 4 and to a lesser extent layer 5 \cite{Constantinople2013} and they predominantly originate from supragranular layers (see Figure~\ref{fig:layerprocessing}). On the other hand, feedback connections from higher areas terminate primarily in layers 1 and 5, but avoid layer 4 \cite{Anderson2009}. The differential contribution is not well established \cite{Shipp2013}. This `canonical microcircuit' describes the excitatory relay of information within the cortex. With its link to the predictive coding, it can provide a more mechanistic understanding of the computations in the brain \cite{Shipp2016}.
+\input{./Chapters/01_Introduction/Images/LaminarProcessing}
 
-So the layers may give new information about the working of a single region, but may just as well be informative about cross-regional communication. There is 
-The interregional connections have been described 
+So the layers contain information about the processing within single region, but may just as well be informative about cross-regional communication. Tracer studies reveal large networks of regions via feedforward and feedback connections \cite{Felleman1991}, see Figure~\ref{fig:felleman}. Tracers heavily rely on (post mortem) structural connectivity, so even though the connections themselves can be mapped out, the strength and nature of connections remains unclear. This is why in vivo investigation of the cortical layers could add new information to the workings of directional and causal communication during task performance. Current work into inter regional causal inference in the brain primarily relies on (disputable) characteristics of haemodynamic consequences of brain interaction in Dynamic Causal Modelling (DCM) \cite{Friston2009} or timing differences in signals with Granger Causality \cite{Aalen2007} that can further be used to establish cortical hierarchies \cite{Michalareas2016}. The cortical layers may provide the same information of inter regional feedforward and feedback communication in living subjects and could tell more about the crosstalk between regions at the network level. 
+\input{./Chapters/01_Introduction/Images/Felleman}
 
-At the level of the microcircuit 
+Almost all regions in the brain contain the same types of neurons and a comparable laminar structure. It is therefore fair to assumes that many of the computational underpinnings translate from one brain region to the next \cite{Buonomano1998}. Thus, a better understanding of layer specific processing in one regions and/or process may also teach us more general principles of the brain. For a small set of cognitive tasks one may predict strong feedforward drive, for example when a lot of sensory input is involved. Alternatively, when strong predictions, expectations, or imagination is involved, it is likely to be a feedback process. But is there anything that could constitute as feedforward or feedback when it comes to language processing, remembering, or experiencing emotions? This is largely unknown and to get a better mechanistic understanding it is important to learn more about the laminar processing. 
 
-A massive network from connections to a large set 
-\cite{Felleman1991}.
+There is a variety of cognitive function in which layer specific dissociation could already be an interesting tool, as there are clear predictions with respect to feedback and feedforward drive \cite{Lawrence2017}. For example in the area of visual attention, prediction, or saliency, it could be interesting to compare and contrast the different types of hypothesised feedback drive against visual feedforward drive. It may also be clinical applications, as some mental disorders are expected to have abnormalities in directional communication between brain regions. Hallucinations and delusions are hypothesised to have different predictive coding mechanisms \cite{Fletcher2008} and are strongly linked to abnormal perception. The abnormal connectivity between brain areas or different ...
+
+ 
+ 
+Also in clinical settings, there is reason to believe 
+
+
+It could shed light on a multitude of cognitive processes and open doors to a whole new type of information and new research in the brain.
+
+
+
 
 
 
 There is still a significant explanatory gap between the level of (cross-regional) prediction errors and the level of cognitive capacities. The cortical layer are right in the middle and 
 
-
-
- There is strong evidence that there are layer specific differences for (sensory) feed forward processes with respect to feedback processes.  Indeed, also functionally this seems to reflected in invasive electrical recordings in macaques \cite{Buffalo2011,Maier2010,Maier2011,VanKerkoerle2017}. 
+There is strong evidence that there are layer specific differences for (sensory) feedforward processes with respect to feedback processes. Indeed, also functionally this seems to reflected in invasive electrical recordings in macaques \cite{Buffalo2011,Maier2010,Maier2011,VanKerkoerle2017}. 
  
+
+At the macro scale, related with the layers of deep learning networks, also at micro scale?\cite{Guclu}
  
-Related with the layers of deep learning networks, although without direct proof \cite{Guclu}
+
+For a small set of cognitive tasks, it is relatively straightforward to say if they are feedforward or feedback, but now think of more complicated processes: 
+
  
-interaction between brain regions
-hierarchy study \cite{Michalareas2016}, DCM, inter region communication
+
+However, the greatest barrier is that neuronal communication is not easily measured. With fMRI, only a derivative of neuronal firing can be measured as changes in oxygen consumption. We will therefore first need to get a better understanding of what type of information it is that fMRI gives us.
 
 
-
-%% I think here you should demonstrate more detailed knowledge of what these theories are. It isn't really enough to knock it off in a few lines. See some of the drawings in Felleman and van Essen, but also the publications of Shipp deserve a mention. Also it would be good to add some figures in here. 
-
-
-
-For a small set of cognitive tasks, it is relatively straightforward to say if they are feed forward or feedback, but now think of more complicated processes: what would constitute as feed forward in language processing, decision making or memory? This is largely unknown and that is why it is of great interest to learn more about the laminar processing. It could shed light on a multitude of cognitive processes and open doors to a whole new type of information and new research in the brain \cite{Lawrence2017}. However, the greatest barrier is that neuronal communication is not easily measured. With fMRI, only a derivative of neuronal firing can be measured as changes in oxygen consumption. We will therefore first need to get a better understanding of what type of information it is that fMRI gives us.
-%% This seems quite naiive, what are examples of feedforward tasks, how about within region interactions between layers? Is it worth mentioning predicitve coding?
 
 \section*{MRI}
 The basis of magnetic resonance imaging (MRI) is the phenomenon of nuclear magnetic resonance (NMR). In principle, this describes magnetic behaviour of protons and neutrons in terms of their \emph{quantum spin}: a preferred axis of rotation of an elementary particle. Normally, each spin has a random orientation of the axis of rotation. In the presence of a magnetic field, however, the spins will start precessing around the axis of the main magnetic field. The speed of rotation (angular frequency) will be directly proportional to the magnitude of the field, the Larmor frequency. In 1946, Felix Bloch and Edward Purcell %%These were completely independent groups
@@ -97,12 +101,6 @@ In addition,
 
 
 
-Imaging flying in loud helicopter above a large highway crossing, and with a microphone you try to pick up the sound of the cycling lane.
-
-Picking up the footsteps of a pedestrian on the side  road, next to a loud highway when an 
-
-
-
 While it is known in which layers are intially targeted by feedback and feed foward signals, little is known about their further processing. There is evidence that excitatory neurons may quickly redistribute input from the thalamus by means of their local axonal collaterals \cite{Guy2017,ReyesPuerta2015}. As a result, cortical activity may nearly instantaneously spread over several layers and columns, to the detriment of laminar specificity of the BOLD signal.
 
 \cite{Maass2014}
@@ -116,13 +114,9 @@ We did not discuss variability in thickness of the layers
 
 accelarated imaging, GRAPPA, SENSE
 
-
-Needle in a haystack on a windy day
-
-
 2D versus 3D acquisition
 
 k-space equation
 
 
-
+beyond correlational measures
