@@ -39,17 +39,17 @@
 \contentsline {section}{\numberline {4.2}Methods}{76}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Participants}{76}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Experimental design and stimuli}{77}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}MR data acquisition}{78}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}MR data acquisition}{79}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Functional MRI preprocessing}{79}{subsection.4.2.4}
 \contentsline {subsubsection}{Data preprocessing}{79}{section*.26}
 \contentsline {subsubsection}{Regions of Interest}{80}{section*.27}
-\contentsline {subsection}{\numberline {4.2.5}Cortical profile extraction}{80}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Cortical profile extraction}{81}{subsection.4.2.5}
 \contentsline {subsection}{\numberline {4.2.6}Statistical Analyses}{81}{subsection.4.2.6}
 \contentsline {subsection}{\numberline {4.2.7}Code availability}{82}{subsection.4.2.7}
 \contentsline {section}{\numberline {4.3}Results}{82}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Spatial attention increases fMRI response amplitudes}{82}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Spatial attention increases fMRI response amplitudes}{83}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Spatial attention increases responses across the layers}{83}{subsection.4.3.2}
-\contentsline {section}{\numberline {4.4}Discussion}{86}{section.4.4}
+\contentsline {section}{\numberline {4.4}Discussion}{85}{section.4.4}
 \contentsline {section}{\numberline {4.5}Author contributions}{88}{section.4.5}
 \contentsline {section}{\numberline {4.6}Acknowledgements}{88}{section.4.6}
 \contentsline {section}{\numberline {4.7}Supplementary Materials}{88}{section.4.7}
@@ -70,3 +70,4 @@
 \contentsline {section}{\numberline {5.7}Author contributions}{107}{section.5.7}
 \contentsline {chapter}{\chapternumberline {6}Summary and Discussion}{109}{chapter.6}
 \contentsline {section}{\numberline {6.1}General Discussion}{118}{section.6.1}
+\contentsline {chapter}{Bibliography}{121}{section*.40}
