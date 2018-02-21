@@ -175,6 +175,7 @@ for file in tex_files:
 			print(line.replace('\input{', '\input{./Chapters/05_Porcupine/')
                        .replace('\citep{', '\cite{')
                        .replace('section*{', 'section{')
+                       .replace('~\\nameref{app:docker}', ' S1 Docker files')
                        .replace('clip=true]{', 'clip=true]{./Chapters/05_Porcupine/')
                    , end='')
 			
