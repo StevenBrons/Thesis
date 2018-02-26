@@ -4,6 +4,7 @@
 *.bak
 *.out
 *.log
+*.toc
 *.synctex.gz
 *.aux
 *.blg
