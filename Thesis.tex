@@ -8,6 +8,13 @@
 \linespread{1.0} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
+\usepackage{afterpage} % Used for blank pages
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 %\usepackage{marginnote}
 \usepackage[a4paper, margin=1in, marginparwidth=0.1in, marginparsep=0.1in]{geometry} % Document margins %JS add margin info
 \usepackage{multicol} % Used for the two-column layout of the document
@@ -99,12 +106,20 @@
 	\vfill
 \end{titlepage}
 
+\afterpage{\blankpage}
 \include{./Chapters/01_Introduction/Introduction}
-%\include{./Chapters/02_Registration/Registration}
-%\include{./Chapters/03_GLM/GLM}
-%\include{./Chapters/04_Attention/Attention}
-%\include{./Chapters/05_Porcupine/Porcupine}
-%\include{./Chapters/06_Discussion/Discussion}
-%\include{./Chapters/07_Appendix/Appendix}
+\afterpage{\blankpage}
+\include{./Chapters/02_Registration/Registration}
+\afterpage{\blankpage}
+\include{./Chapters/03_GLM/GLM}
+\afterpage{\blankpage}
+\include{./Chapters/04_Attention/Attention}
+\afterpage{\blankpage}
+\include{./Chapters/05_Porcupine/Porcupine}
+\afterpage{\blankpage}
+\include{./Chapters/06_Discussion/Discussion}
+\afterpage{\blankpage}
+\include{./Chapters/07_Appendix/Appendix}
+\afterpage{\blankpage}
 
 \end{document}
