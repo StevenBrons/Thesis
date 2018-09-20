@@ -2,15 +2,14 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,fleqn]{book}
-
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\linespread{1.5} % Line spacing - Palatino needs more space between lines
+\documentclass[twoside,openright,11pt,fleqn]{book}
+%\usepackage[sc]{mathpazo} % Use the Palatino font
+%\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.0} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
-\usepackage{marginnote}
-\usepackage[letterpaper, margin=1in, marginparwidth=0.1in, marginparsep=0.1in]{geometry} % Document margins %JS add margin info
+%\usepackage{marginnote}
+\usepackage[a4paper, margin=1in, marginparwidth=0.1in, marginparsep=0.1in]{geometry} % Document margins %JS add margin info
 \usepackage{multicol} % Used for the two-column layout of the document
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
@@ -41,7 +40,7 @@
 \usepackage[numbered,framed]{matlab-prettifier}
 \usepackage{subcaption}
 \usepackage{textcomp}
-\usepackage{txfonts}
+%\usepackage{txfonts}
 \usepackage{geometry}
 \usepackage{nameref}
 \usepackage[finalnew]{Stylesheets/trackchanges}
@@ -79,6 +78,11 @@
 % BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage[default,osfigures,scale=0.95]{Open Sans}
+%\usepackage[T1]{fontenc}
+%\normalfont
+
 \begin{document}
 \setlength{\parindent}{0.5cm}
 %\thispagestyle{fancy} % All pages have headers and footers
@@ -96,12 +100,11 @@
 \end{titlepage}
 
 \include{./Chapters/01_Introduction/Introduction}
-\include{./Chapters/02_Registration/Registration}
-\include{./Chapters/03_GLM/GLM}
-\include{./Chapters/04_Attention/Attention}
-\include{./Chapters/05_Porcupine/Porcupine}
-\include{./Chapters/06_Discussion/Discussion}
-\include{./Chapters/07_Appendix/Appendix}
+%\include{./Chapters/02_Registration/Registration}
+%\include{./Chapters/03_GLM/GLM}
+%\include{./Chapters/04_Attention/Attention}
+%\include{./Chapters/05_Porcupine/Porcupine}
+%\include{./Chapters/06_Discussion/Discussion}
+%\include{./Chapters/07_Appendix/Appendix}
 
 \end{document}
-
