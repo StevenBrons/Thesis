@@ -2,10 +2,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[twoside,openright,11pt,fleqn]{book}
+\documentclass[twoside,openright,8.25pt,fleqn]{book}
 %\special{papersize=210mm,297mm}
-%\usepackage[sc]{mathpazo} % Use the Palatino font
-%\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \linespread{1.0} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
@@ -25,10 +23,10 @@
 	inner=30mm,
 	outer=25mm,
 	bottom=21.5mm,
-	footskip=13.5mm
+	footskip=13.5mm	
 ]{geometry} % paperstyle and margins
 \voffset -14mm
-\headsep 14mm
+%\headsep 14mm
 
 
 \usepackage{multicol} % Used for the two-column layout of the document
@@ -105,7 +103,7 @@
 %\normalfont
 
 \begin{document}
-\setlength{\parindent}{0.5cm}
+\setlength{\parindent}{0.5pt}
 %\thispagestyle{fancy} % All pages have headers and footers
 \renewcommand{\vec}[1]{\mathbf{#1}} %This command will make \vec typeset LaTeX vectors using bold instead of an arrow:
 
@@ -113,8 +111,7 @@
 	\centering
 	\vspace{1cm}
 	\vspace{1.5cm}
-	{\huge\bfseries On the analysis of layer specific fMRI \par	%into the cortical depths of the unknown
-	}
+	{\huge\bfseries On the analysis of layer specific fMRI \par}	%into the cortical depths of the unknown
 	\vspace{4cm}
 	{\Large by \\ Tim van Mourik\par}
 	\vfill
