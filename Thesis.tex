@@ -3,20 +3,34 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[twoside,openright,11pt,fleqn]{book}
+%\special{papersize=210mm,297mm}
 %\usepackage[sc]{mathpazo} % Use the Palatino font
 %\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \linespread{1.0} % Line spacing - Palatino needs more space between lines
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 
-\usepackage{afterpage} % Used for blank pages
-\newcommand\blankpage{%
+
+% Used for blank pages
+\usepackage{afterpage}
+\newcommand\blankpage{
     \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
     \newpage}
 
-%\usepackage{marginnote}
-\usepackage[a4paper, margin=1in, marginparwidth=0.1in, marginparsep=0.1in]{geometry} % Document margins %JS add margin info
+%geometry and layout
+\pagestyle{plain} % center all page numbering
+\usepackage[
+	letterpaper,
+	inner=30mm,
+	outer=25mm,
+	bottom=21.5mm,
+	footskip=13.5mm
+]{geometry} % paperstyle and margins
+\voffset -14mm
+\headsep 14mm
+
+
 \usepackage{multicol} % Used for the two-column layout of the document
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
@@ -111,15 +125,15 @@
 \afterpage{\blankpage}
 \include{./Chapters/02_Registration/Registration}
 \afterpage{\blankpage}
-\include{./Chapters/03_GLM/GLM}
-\afterpage{\blankpage}
-\include{./Chapters/04_Attention/Attention}
-\afterpage{\blankpage}
-\include{./Chapters/05_Porcupine/Porcupine}
-\afterpage{\blankpage}
-\include{./Chapters/06_Discussion/Discussion}
-\afterpage{\blankpage}
-\include{./Chapters/07_Appendix/Appendix}
-\afterpage{\blankpage}
+%\include{./Chapters/03_GLM/GLM}
+%\afterpage{\blankpage}
+%\include{./Chapters/04_Attention/Attention}
+%\afterpage{\blankpage}
+%\include{./Chapters/05_Porcupine/Porcupine}
+%\afterpage{\blankpage}
+%\include{./Chapters/06_Discussion/Discussion}
+%\afterpage{\blankpage}
+%r\include{./Chapters/07_Appendix/Appendix}
+%\afterpage{\blankpage}
 
 \end{document}
