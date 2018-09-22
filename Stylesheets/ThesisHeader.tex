@@ -7,8 +7,6 @@
 \usepackage{microtype} % micro-type adjustments, prevents a lot of bad boxes
 \usepackage{nameref}
 \usepackage[hidelinks, bookmarksnumbered=true, bookmarksdepth=1]{hyperref} % hidelinks disables
-\usepackage{marginnote}
-%\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions 
 \usepackage{float} 		% adds specific locations with the [H] (e.g. \begin{table}[H])
 \usepackage{titlesec} 	% Allows customization of titles
 \usepackage{tocloft}
@@ -64,10 +62,8 @@
 \usepackage[format=hang,font=footnotesize,labelfont={sc,bf}]{caption}% styling of figure/table captions
 
 
-
-
-\newtoggle{manus}
-\togglefalse{manus}
+%\newtoggle{manus}
+%\togglefalse{manus}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Macros, environments, etc.
@@ -75,16 +71,16 @@
 
 % memoir class options
 \nouppercaseheads
-\setsecnumdepth{subsection}
+%\setsecnumdepth{subsection}
 
 % margins
-\setulmarginsandblock{3cm}{3.7cm}{*}
+%\setulmarginsandblock{3cm}{3.7cm}{*}
 
-\iftoggle{manus}{%
-	\setlrmarginsandblock{3cm}{3cm}{*}
-}{%
-	\setlrmarginsandblock{2cm}{3cm}{*}
-}
+%\iftoggle{manus}{%
+%	\setlrmarginsandblock{3cm}{3cm}{*}
+%}{%
+%	\setlrmarginsandblock{2cm}{3cm}{*}
+%}
 
 \setheadfoot{1cm}{1.5cm}
 \setheaderspaces{*}{0.8cm}{*}
@@ -111,10 +107,10 @@
 	\createmark{chapter}{both}{nonumber}{}{\space}
 }
 
-\iftoggle{manus}{%
-	\makeevenhead{myheadings}{\footnotesize\textsc{Manuscript Doctoral Thesis Tim van Mourik}}{}{\footnotesize\thepage}
-	\makeoddhead{myheadings}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}{}{\footnotesize\thepage}
-}{%
+%\iftoggle{manus}{%
+%	\makeevenhead{myheadings}{\footnotesize\textsc{Manuscript Doctoral Thesis Tim van Mourik}}{}{\footnotesize\thepage}
+%	\makeoddhead{myheadings}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}{}{\footnotesize\thepage}
+%}{%
 
 % everything in header
 	%\makeevenhead{myheadings}{\footnotesize\thepage}{}{\footnotesize\textsc{Manuscript Doctoral Thesis Tim van Mourik}}
@@ -122,11 +118,11 @@
 	
 % page number in footer
 	
-	\makeevenhead{myheadings}{\footnotesize\textsc{chapter \thechapter}}{}{}
-	\makeoddhead{myheadings}{}{}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}
-	\makeevenfoot{myheadings}{\footnotesize\thepage}{}{}
-	\makeoddfoot{myheadings}{}{}{\footnotesize\thepage}
-}
+%	\makeevenhead{myheadings}{\footnotesize\textsc{chapter \thechapter}}{}{}
+%	\makeoddhead{myheadings}{}{}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}
+%	\makeevenfoot{myheadings}{\footnotesize\thepage}{}{}
+%	\makeoddfoot{myheadings}{}{}{\footnotesize\thepage}
+%}
 
 % headings for back matter
 \copypagestyle{backheadings}{myheadings}
@@ -154,11 +150,11 @@
 \setcounter{tocdepth}{0}
 
 % used to align figures to inner margin in book, or centered for manuscript
-\iftoggle{manus}{%
-	\newcommand{\bigfigalign}{center}
-}{%
-	\newcommand{\bigfigalign}{inner}
-}
+%\iftoggle{manus}{%
+%	\newcommand{\bigfigalign}{center}
+%}{%
+%	\newcommand{\bigfigalign}{inner}
+%}
 
 % typeset subsubsection headings inline (used in model chapter)
 \makeatletter
