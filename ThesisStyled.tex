@@ -2,7 +2,7 @@
 % Document class and packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11pt,b5paper,twoside,openright]{memoir}
+\documentclass[8.25pt,b5paper,twoside,openright]{memoir}
 
 \input{Stylesheets/ThesisHeader}
 
@@ -14,16 +14,16 @@
 \author{Tim van Mourik}
 \date{\today}
 
-
 \linespread{1.3} % Bigger spacing for the reading committee
 
 \begin{document}
 % use mainmatter because then we get arabic numerals throughout
 \mainmatter
 
+\afterpage{\blankpage}
+
 \input{./Chapters/FrontMatter.tex}
 
-\newpage
 \pagestyle{myheadings}
 
 % contents on right-side
@@ -31,16 +31,18 @@
 \renewcommand{\cftchapterpagefont}{\normalfont}
 \tableofcontents*
 
+\afterpage{\blankpage}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main matter (chapters)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{./Chapters/01_Introduction/Introduction}
-\include{./Chapters/02_Registration/Registration}
-\include{./Chapters/03_GLM/GLM}
-\include{./Chapters/04_Attention/Attention}
-\include{./Chapters/05_Porcupine/Porcupine}
-\include{./Chapters/06_Discussion/Discussion}
+%\include{./Chapters/02_Registration/Registration}
+%\include{./Chapters/03_GLM/GLM}
+%\include{./Chapters/04_Attention/Attention}
+%\include{./Chapters/05_Porcupine/Porcupine}
+%\include{./Chapters/06_Discussion/Discussion}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Back matter (references, etc.)

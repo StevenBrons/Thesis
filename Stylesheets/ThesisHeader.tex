@@ -2,7 +2,8 @@
 %%%%%%%%%%%%%%%%%%%%%%
 %\usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage{opensans}
+%\usepackage[default,osfigures,scale=0.95]{opensans}
+\renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype} % micro-type adjustments, prevents a lot of bad boxes
 \usepackage{nameref}
 \usepackage[hidelinks, bookmarksnumbered=true, bookmarksdepth=1]{hyperref} % hidelinks disables
@@ -14,7 +15,7 @@
 \usepackage{xcolor} 	%use colours, e.g. 'gray' in chapter title page
 \usepackage{lmodern}
 \usepackage{listings}
-\usepackage{geometry}
+%\usepackage{geometry}
 \usepackage[dutch,english]{babel} % language and hyphenation (put main language last)
 \usepackage{graphicx}	% inclusion of graphics
 \usepackage[export]{adjustbox}% allows centering figures that are wider than text 
@@ -27,8 +28,27 @@
 \usepackage{relsize}	% style reference list
 \usepackage{appendix}
 
-\usepackage[finalnew]{Stylesheets/trackchanges}
+% Used for blank pages
+\usepackage{afterpage}
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage}
 
+%geometry and layout
+\pagestyle{plain} % center all page numbering
+\usepackage[
+	inner=30mm,
+	outer=25mm,
+	bottom=21.5mm,
+	footskip=13.5mm	
+]{geometry}
+\voffset = -14mm
+%\topmargin = 14mm
+\headsep 14mm
+
+\usepackage[finalnew]{Stylesheets/trackchanges}
 %%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{silence}
