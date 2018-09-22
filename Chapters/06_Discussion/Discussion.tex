@@ -3,6 +3,7 @@
 \chaptermark{Discussion}
 \label{ch:discussion}
 
+\newpage
 The layers of the cortex contain information about the nature of processes undertaken by brain regions and may reveal more information about inter-regional communication. Functional MRI is the most realistic method to date for studying the cortical layers in living human subjects, as it is spatially precise and non-invasive. The objective of this thesis was to pave the way for doing more robust and routine laminar fMRI analysis. The work presented in this thesis provides a significant step towards this end. We have developed several new methods that solve major problems in laminar analysis, we have implemented a full layer specific analysis, and we took explicit care to make the entire analysis pipeline reproducible and reusable.
 
 First, we addressed the problem of local distortions that are often present in Echo Planar Images (EPI). Due to inhomogeneities in the main magnetic field, nuclei in some areas precess at different rates. Effectively, this causes small shifts in parts of the image with respect to the true position. Thus, even if the true locations of the layers are known in anatomical space, they will be displaced by distortions that can easily be larger than the thicknesses of the layers. Without correcting this effect, it is virtually impossible to retrieve any reliable layer signal. Chapter~\ref{ch:registration} introduced a method for addressing this type of distortion, Recursive Boundary Registration (RBR), which can achieve submillimetre accuracy.
