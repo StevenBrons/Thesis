@@ -31,7 +31,6 @@
 \newcommand\blankpage{
     \null
     \thispagestyle{empty}
-    \addtocounter{page}{-1}
     \newpage}
 
 %geometry and layout
@@ -101,7 +100,6 @@
 \makeheadfootruleprefix{myheadings}{}{%
   \checkoddpage\ifoddpage\hspace*{\dimexpr\textwidth-8mm\relax}\fi}
 \makeheadrule{myheadings}{\textwidth}{\normalrulethickness}
-\makefootrule{myheadings}{8mm}{\normalrulethickness}{-4pt}
 
 \makepsmarks{myheadings}{%
 	\createmark{chapter}{both}{nonumber}{}{\space}
@@ -126,7 +124,7 @@
 
 % headings for back matter
 \copypagestyle{backheadings}{myheadings}
-\makeevenhead{backheadings}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}{}{}
+%\makeevenhead{backheadings}{\footnotesize\textsc{\MakeLowercase{\leftmark}}}{}{}
 
 % label for subcaption (i.e. A)
 \newcommand*{\subcap}[1]{ \textbf{\textsc{(#1)}} }
